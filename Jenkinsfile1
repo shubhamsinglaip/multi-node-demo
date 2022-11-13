@@ -1,11 +1,14 @@
 pipeline {
-    agent {
-        label 'jennode'
-    }
+    agent any
+    stash 'source'
     
     stages {
-        stage('1') {
+        stage('stage 1') {
+        agent {
+            label 'jennode'
+        }
             steps {
+                unstash 'source'
                 sh 'echo "multi-node-demo"'
             }
         }
