@@ -12,5 +12,14 @@ pipeline {
                 sh 'echo "multi-node-demo"'
             }
         }
+        stage('stage 2') {
+        agent {
+            label 'myfirstagent'
+        }
+            steps {
+                
+                sh 'echo "multi-node-demo"'
+            }
+        }
     }
 }
