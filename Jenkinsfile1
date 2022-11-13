@@ -17,7 +17,7 @@ pipeline {
             label 'myfirstagent'
         }
             steps {
-                unstage 'source'
+                unstash 'source'
                 sh 'echo "multi-node-demo"'
             }
         }
