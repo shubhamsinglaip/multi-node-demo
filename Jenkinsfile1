@@ -8,7 +8,7 @@ pipeline {
             label 'jennode'
         }
             steps {
-                unstash 'source'
+                stash 'source'
                 sh 'echo "multi-node-demo"'
             }
         }
